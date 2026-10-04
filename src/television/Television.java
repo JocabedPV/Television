@@ -5,6 +5,7 @@
 package television;
 
 public class Television {
+
        String marca;
        int pulgadas;
        boolean encendido;
@@ -13,18 +14,20 @@ public class Television {
        
     void encender() {
         if (encendido) {
-            System.out.println("La televisión" + marca + "ya esta encendida");
+            System.out.println("La television" + marca + "ya esta encendida");
             
         } else {
             encendido = true;
-            System.out.println("Encendiendo la televisión...");
+            System.out.println("Encendiendo la television...");
+            System.out.println("---TELEVISION ENCENDIDA---");
         }
     }
     
     void apagar() {
         if (encendido) {
             encendido = false;
-            System.out.println("Apagando la televisión...");
+            System.out.println("Apagando la television...");
+            System.out.println("---TELEVISION APAGADA---");
             
         } else {
             System.out.println("La television " + marca + "ya esta apagada");
@@ -62,12 +65,19 @@ public class Television {
         
     }
        
-       void cambiarCanal(){
+       void cambiarCanal(int nuevoCanal){
         if (encendido){
             canal = nuevoCanal;
             System.out.println("Cambiando al canal " + canal + "...");
         } else {
-            System.out.println("Enciende primero la televisión para poder cambiar de canal");
+            System.out.println("Enciende primero la television para poder cambiar de canal");
         }     
+  
+        
+       }
+       
+      
     }
-}
+
+
+
